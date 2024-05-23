@@ -11,7 +11,7 @@ public class openAccount extends HttpServlet {
 
         String name = request.getParameter("name");
         String email = request.getParameter("email");
-        String phone = request.getParameter("phone");
+        double phone = Double.parseDouble(request.getParameter("phoneNumber"));
         String dob = request.getParameter("dob");
         String address = request.getParameter("address");
         String accountType = request.getParameter("accountType");
@@ -26,7 +26,7 @@ public class openAccount extends HttpServlet {
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, name);
             ps.setString(2, email);
-            ps.setString(3, phone);
+            ps.setDouble(3, phone);
             ps.setString(4, dob);
             ps.setString(5, address);
             ps.setString(6, accountType);
@@ -36,20 +36,17 @@ public class openAccount extends HttpServlet {
 
             int result = ps.executeUpdate();
             if (result > 0) {
-                out.println("<script>alert('Account opened successfully');</script>");
-                RequestDispatcher rd = request.getRequestDispatcher("index.html");
-                rd.include(request, response);
+                out.println("<script>alert('Account Opened Successfully'); window.location='index.html';</script>");
+
             } else {
-                out.println("<script>alert('Failed to open account');</script>");
-                RequestDispatcher rd = request.getRequestDispatcher("openAccount.html");
-                rd.include(request, response);
+                out.println("<script>alert('Account Not Opened'); window.location='openAccount.html';</script>");
+
             }
             ps.close();
             con.close();
         } catch (Exception e) {
-            out.println("<script>alert('Error: " + e.getMessage() + "');</script>");
-            RequestDispatcher rd = request.getRequestDispatcher("openAccount.html");
-            rd.include(request, response);
+            out.println("<script>alert('error'); window.location='openAccount.html';</script>");
+
         }
         out.close();
     }
