@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.sql.*;
 
-public class customerLogin extends HttpServlet {
+public class customerlogin extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
@@ -16,8 +16,8 @@ public class customerLogin extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root", "root");
             PreparedStatement ps = con.prepareStatement("SELECT * FROM customerdetails WHERE email = ? AND password = ?");
-            ps.setString(2, email);
-            ps.setString(8, password);
+            ps.setString(1, email);
+            ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
