@@ -12,6 +12,14 @@
         <servlet-name>clogin</servlet-name>
         <servlet-class>clogin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>tranfermoey</servlet-name>
+        <servlet-class>tranfermoey</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>transfermoney</servlet-name>
+        <servlet-class>transfermoney</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>openAccount</servlet-name>
         <url-pattern>/openAccount</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>clogin</servlet-name>
         <url-pattern>/clogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>tranfermoey</servlet-name>
+        <url-pattern>/tranfermoey</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>transfermoney</servlet-name>
+        <url-pattern>/transfermoney</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
