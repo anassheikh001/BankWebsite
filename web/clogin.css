@@ -71,3 +71,49 @@ form a{
  color: #7f2092;
  padding: 0 0 0 20px;
 }
+/* General Styles for Navbar */
+.navbar {
+  background-color: #343a40; /* Dark background color */
+  padding: 1rem 2rem; /* Padding for spacing */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Larger font size for brand */
+  font-weight: bold; /* Bold font weight for brand */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem; /* Standard font size for nav links */
+  padding: 0.5rem 1rem; /* Padding for nav links */
+  color: #ffffff; /* White color for nav links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #adb5bd; /* Lighter gray color on hover */
+}
+
+.navbar-toggler {
+  border: none; /* Remove border from toggler */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom icon color */
+}
+
+.btn-success {
+  background-color: #28a745; /* Custom background color for button */
+  border: none; /* Remove border from button */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker background color on hover */
+}
+
+.btn-success a {
+  text-decoration: none; /* Remove underline from link */
+  color: #000000; /* Black color for link text */
+}
+
+.btn-success a:hover {
+  color: #ffffff; /* White color on hover */
+}
